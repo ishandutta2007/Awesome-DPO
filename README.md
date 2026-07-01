@@ -10,7 +10,11 @@ Direct Preference Optimization (DPO) is a foundational post-training alignment f
 The technical approach to preference optimization has transitioned from multi-model actor-critic loops to static mathematical reparameterizations, moving toward reference-free and online iterative self-correction ecosystems.
 
 ```mermaid
-[RLHF (PPO, 2019-2023)] ----> [Direct Preference (DPO, 2023)] ----> [Reference-Free / Iterative Online DPO (2024-Present)](4-Model VRAM Bottleneck)         (Static Binary Cross-Entropy Loss)         (Unified Single-Network Continuous Alignment)
+flowchart LR
+    A["RLHF (PPO, 2019–2023)<br/>(4-Model VRAM Bottleneck)"]
+    --> B["Direct Preference Optimization (DPO, 2023)<br/>(Static Binary Cross-Entropy Loss)"]
+    --> C["Reference-Free / Iterative Online DPO (2024-Present)<br/>(Unified Single-Network Continuous Alignment)"]
+
 ```
 
 *   **The Actor-Critic RLHF Era (PPO Baseline, ~2019–2023)**
